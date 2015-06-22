@@ -34,7 +34,7 @@ class Query(object):
             for filter_line in self._filters:
                 request += '\nFilter: %s' % (filter_line)
         request += '\nOutputFormat: json\nColumnHeaders: on\n'
-        return request
+        return request + "\n"
 
     def columns(self, *args):
         self._columns = args
